@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class ServicesController < ApplicationController
+  def new
+  end
+
   def create
     @service = Service.new(service_params)
     if @service.save
