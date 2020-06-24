@@ -7,6 +7,7 @@ class ServicesController < ApplicationController
   def create
     @service = Service.new(service_params)
     if @service.save
+      flash.notice = "サービスを登録しました。"
       head :ok
     else
       respond_to do |format|
