@@ -52,7 +52,7 @@ class ServiceForm extends React.Component {
                 <strong className="form-item__label">サービス名</strong>
                 <input
                   type="text"
-                  className="form_item__text-input--select"
+                  className="form-item__text-input"
                   id="service_name"
                   name="name"
                   placeholder="サービス名"
@@ -69,6 +69,7 @@ class ServiceForm extends React.Component {
                     id="service_plan"
                     value={plan}
                     onChange={this.handleInputChange}
+                    className="form-item__select"
                   >
                     <option value="monthly">月額</option>
                     <option value="yearly">年額</option>
@@ -80,7 +81,7 @@ class ServiceForm extends React.Component {
                   <strong className="form-item__label">料金</strong>
                   <input
                     type="number"
-                    className="form_item__text-input"
+                    className="form-item__text-input"
                     id="service_price"
                     name="price"
                     onChange={this.handleInputChange}
@@ -93,7 +94,7 @@ class ServiceForm extends React.Component {
                 <strong className="form-item__label">更新日</strong>
                 <input
                   type="date"
-                  className="form_item__text-input"
+                  className="form-item__text-input"
                   id="service_renewed_on"
                   name="renewed_on"
                   onChange={this.handleInputChange}
@@ -105,7 +106,7 @@ class ServiceForm extends React.Component {
                 <strong className="form-item__label">通知日</strong>
                 <input
                   type="date"
-                  className="form_item__text"
+                  className="form-item__text"
                   id="service_remind_on"
                   name="remind_on"
                   onChange={this.handleInputChange}
