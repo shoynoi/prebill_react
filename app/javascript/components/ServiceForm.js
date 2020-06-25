@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ValidateErrors from './ValidateErrors';
 
 class ServiceForm extends React.Component {
   constructor(props) {
@@ -35,36 +36,14 @@ class ServiceForm extends React.Component {
     this.updateService(name, value);
   }
 
-  renderErrors() {
-    const { errorMessages } = this.props;
-
-    if (errorMessages.length === 0) {
-      return null;
-    }
-
-    return (
-      <div className="errors">
-        <h3>入力内容にエラーがありました。</h3>
-        <div className="errors__body">
-          <ul className="errors__items">
-            {errorMessages.map((errorMessage, index) => (
-              <li key={index} className="errors_item">
-                {errorMessage}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    );
-  }
-
   render() {
     const { plan } = this.state;
+    const { errorMessages } = this.props;
 
     return (
       <div>
 
-        {this.renderErrors()}
+        <ValidateErrors errorMessages={errorMessages} />
 
         <form onSubmit={this.handleSubmit}>
           <div className="form-items">
