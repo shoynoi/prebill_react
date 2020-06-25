@@ -112,6 +112,17 @@ class ServiceForm extends React.Component {
                 />
               </label>
             </div>
+            <div className="form-item">
+              <label htmlFor="service_description">
+                <strong className="form-item__label">メモ</strong>
+                <textarea
+                  name="description"
+                  id="service_description"
+                  className="form-item__textarea"
+                  onChange={this.handleInputChange}
+                />
+              </label>
+            </div>
           </div>
           <ul className="form-actions__items">
             <li className="form-actions__item">
@@ -142,6 +153,7 @@ ServiceForm.defaultProps = {
     price: '',
     renewed_on: '',
     remind_on: '',
+    description: '',
   },
   errorMessages: [],
 };
