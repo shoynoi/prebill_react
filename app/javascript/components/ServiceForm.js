@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ValidateErrors from './ValidateErrors';
+import ValidationErrors from './ValidationErrors';
 
 class ServiceForm extends React.Component {
   constructor(props) {
@@ -43,7 +43,7 @@ class ServiceForm extends React.Component {
     return (
       <div>
 
-        <ValidateErrors errorMessages={errorMessages} />
+        <ValidationErrors errorMessages={errorMessages} />
 
         <form onSubmit={this.handleSubmit}>
           <div className="form-items">

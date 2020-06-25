@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ErrorMessage from './ErrorMessage';
 
-const ValidateErrors = (props) => {
+const ValidationErrors = (props) => {
   const { errorMessages } = props;
   if (errorMessages.length === 0) {
     return null;
@@ -27,12 +27,12 @@ const ValidateErrors = (props) => {
   );
 };
 
-export default ValidateErrors;
+export default ValidationErrors;
 
-ValidateErrors.propTypes = {
+ValidationErrors.propTypes = {
   errorMessages: PropTypes.arrayOf(PropTypes.string),
 };
 
-ValidateErrors.defaultProps = {
+ValidationErrors.defaultProps = {
   errorMessages: [],
 };
