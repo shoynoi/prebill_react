@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ErrorMessage from './ErrorMessage';
+import ErrorMessages from './ErrorMessages';
 
 const ValidationErrors = (props) => {
   const { errorMessages } = props;
@@ -8,19 +8,12 @@ const ValidationErrors = (props) => {
     return null;
   }
 
-  const message = (errorMessage, index) => (
-    <ErrorMessage key={`error-${index}`} errorMessage={errorMessage} />
-  );
-  const listErrorMessages = errorMessages.map((errorMessage, index) => (
-    message(errorMessage, index)
-  ));
-
   return (
     <div className="errors">
       <h3 className="errors__title">入力内容にエラーがありました。</h3>
       <div className="errors__body">
         <ul className="errors__items">
-          {listErrorMessages}
+          <ErrorMessages errorMessages={errorMessages} />
         </ul>
       </div>
     </div>
