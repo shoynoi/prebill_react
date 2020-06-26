@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ServicesController < ApplicationController
-  before_action :load_service, only: %i(update)
+  before_action :load_service, only: %i(edit update)
 
   def new
   end
@@ -15,6 +15,13 @@ class ServicesController < ApplicationController
       respond_to do |format|
         format.json { render json: @service.errors.full_messages, status: 422 }
       end
+    end
+  end
+
+  def edit
+    respond_to do |format|
+      format.html
+      format.json { render json: @service }
     end
   end
 

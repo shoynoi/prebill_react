@@ -37,7 +37,7 @@ class ServiceForm extends React.Component {
   }
 
   render() {
-    const { plan } = this.state;
+    const { service } = this.state;
     const { errorMessages } = this.props;
 
     return (
@@ -56,6 +56,7 @@ class ServiceForm extends React.Component {
                   id="service_name"
                   name="name"
                   placeholder="サービス名"
+                  value={service.name}
                   onChange={this.handleInputChange}
                 />
               </label>
@@ -67,7 +68,7 @@ class ServiceForm extends React.Component {
                   <select
                     name="plan"
                     id="service_plan"
-                    value={plan}
+                    value={service.plan}
                     onChange={this.handleInputChange}
                     className="form-item__select"
                   >
@@ -84,6 +85,7 @@ class ServiceForm extends React.Component {
                     className="form-item__text-input"
                     id="service_price"
                     name="price"
+                    value={service.price}
                     onChange={this.handleInputChange}
                   />
                 </label>
@@ -97,6 +99,7 @@ class ServiceForm extends React.Component {
                   className="form-item__text-input"
                   id="service_renewed_on"
                   name="renewed_on"
+                  value={service.renewed_on}
                   onChange={this.handleInputChange}
                 />
               </label>
@@ -109,6 +112,7 @@ class ServiceForm extends React.Component {
                   className="form-item__text"
                   id="service_remind_on"
                   name="remind_on"
+                  value={service.remind_on}
                   onChange={this.handleInputChange}
                 />
               </label>
@@ -120,6 +124,7 @@ class ServiceForm extends React.Component {
                   name="description"
                   id="service_description"
                   className="form-item__textarea"
+                  value={service.description}
                   onChange={this.handleInputChange}
                 />
               </label>
