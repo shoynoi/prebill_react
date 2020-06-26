@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ServicesController < ApplicationController
-  before_action :load_service, only: %i(edit update)
+  before_action :load_service, only: %i(edit update destroy)
 
   def new
   end
@@ -33,6 +33,13 @@ class ServicesController < ApplicationController
       respond_to do |format|
         format.json { render json: @service.errors.full_messages, status: 422 }
       end
+    end
+  end
+
+  def destroy
+    if @service.destroy
+      flash.notice = "サービスを削除しました。"
+      head :ok
     end
   end
 
