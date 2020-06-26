@@ -5,5 +5,5 @@ Rails.application.routes.draw do
     resources :flash, only: %i(index)
   end
   root to: "home#index"
-  resources :services, only: %i(new create edit update destroy)
+  resources :services, only: %i(index new create edit update destroy)
 end

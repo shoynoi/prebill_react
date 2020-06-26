@@ -3,6 +3,13 @@
 class ServicesController < ApplicationController
   before_action :load_service, only: %i(edit update destroy)
 
+  def index
+    @services = Service.all
+    respond_to do |format|
+      format.json { render json: @services }
+    end
+  end
+
   def new
   end
 
