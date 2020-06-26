@@ -147,7 +147,14 @@ class ServiceForm extends React.Component {
 export default ServiceForm;
 
 ServiceForm.propTypes = {
-  service: PropTypes.objectOf(PropTypes.string),
+  service: PropTypes.shape({
+    name: PropTypes.string,
+    plan: PropTypes.string,
+    price: PropTypes.number,
+    renewed_on: PropTypes.string,
+    remind_on: PropTypes.string,
+    description: PropTypes.string,
+  }),
   onSubmit: PropTypes.func.isRequired,
   errorMessages: PropTypes.arrayOf(PropTypes.string),
 };
@@ -156,7 +163,7 @@ ServiceForm.defaultProps = {
   service: {
     name: '',
     plan: 'monthly',
-    price: '',
+    price: 0,
     renewed_on: '',
     remind_on: '',
     description: '',
