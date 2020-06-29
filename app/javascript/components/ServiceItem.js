@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Service = ({ service }) => (
+const ServiceItem = ({ service }) => (
   <div className="list">
     <div className="list--display">
       <div className="list-item col-lg">{service.name}</div>
@@ -30,9 +30,9 @@ const Service = ({ service }) => (
   </div>
 );
 
-export default Service;
+export default ServiceItem;
 
-Service.propTypes = {
+ServiceItem.propTypes = {
   service: PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string,
@@ -44,6 +44,6 @@ Service.propTypes = {
   }),
 };
 
-Service.defaultProps = {
+ServiceItem.defaultProps = {
   service: undefined,
 };
