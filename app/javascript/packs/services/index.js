@@ -1,12 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
-import ServiceList from '../../components/ServiceList';
+import UsingServices from '../../components/UsingServices';
 import Flash from '../../components/Flash';
 
 const Index = () => (
   <>
     <Flash />
-    <ServiceList />
+    <UsingServices />
   </>
 );
 
