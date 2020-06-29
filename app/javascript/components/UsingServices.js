@@ -1,5 +1,6 @@
 import React from 'react';
 import ServiceList from './ServiceList';
+import ServiceItem from './ServiceItem';
 
 class UsingServices extends React.Component {
   constructor(props) {
@@ -39,18 +40,9 @@ class UsingServices extends React.Component {
           <a href="/services/new">新規登録</a>
         </div>
         <div className="page-body__inner">
-          <div className="list-group">
-            <div className="list-group__labels">
-              <div className="list-group__label col-lg">サービス名</div>
-              <div className="list-group__label col-sm">プラン</div>
-              <div className="list-group__label col-sm">料金</div>
-              <div className="list-group__label">更新日</div>
-              <div className="list-group__label">通知日</div>
-            </div>
-            <div className="list-group__inner">
-              <ServiceList services={services} />
-            </div>
-          </div>
+          <ServiceList>
+            {services.map((service) => <ServiceItem service={service} key={service.id} />)}
+          </ServiceList>
         </div>
       </div>
     );
