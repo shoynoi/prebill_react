@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ServiceItem = ({ service }) => (
+const ServiceItem = ({ service, onDelete }) => (
   <div className="list">
     <div className="list--display">
       <div className="list-item col-lg">{service.name}</div>
@@ -22,7 +22,7 @@ const ServiceItem = ({ service }) => (
             <a href={`services/${service.id}/edit`} className="btn--full btn--sm btn--secondary">修正</a>
           </div>
           <div className="list__action">
-            {/* TODO 削除ボタンを実装 */}
+            <button type="button" onClick={() => onDelete(service.id)}>削除</button>
           </div>
         </div>
       </div>
