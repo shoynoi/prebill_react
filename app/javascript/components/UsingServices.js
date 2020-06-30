@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ServiceList from './ServiceList';
 import ServiceItem from './ServiceItem';
 
@@ -19,3 +20,8 @@ const UsingServices = ({ services, onDelete }) => (
 );
 
 export default UsingServices;
+
+UsingServices.propTypes = {
+  services: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onDelete: PropTypes.func.isRequired,
+};
