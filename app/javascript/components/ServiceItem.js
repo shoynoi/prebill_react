@@ -42,6 +42,7 @@ ServiceItem.propTypes = {
     remind_on: PropTypes.string,
     description: PropTypes.string,
   }),
+  onDelete: PropTypes.func.isRequired,
 };
 
 ServiceItem.defaultProps = {
