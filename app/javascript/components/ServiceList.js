@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ServiceList = (props) => {
-  const { children } = props;
+const ServiceList = ({ children }) => {
   if (children.count === 0) {
     return null;
   }
