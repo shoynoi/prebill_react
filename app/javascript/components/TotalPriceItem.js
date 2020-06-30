@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const TotalPriceItem = ({ amountPrice, color, children }) => (
   <div className={`card card--${color}`}>
@@ -14,3 +15,9 @@ const TotalPriceItem = ({ amountPrice, color, children }) => (
 );
 
 export default TotalPriceItem;
+
+TotalPriceItem.propTypes = {
+  amountPrice: PropTypes.func.isRequired,
+  color: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
+};
