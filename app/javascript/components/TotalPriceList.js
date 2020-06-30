@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TotalPriceItem from './TotalPriceItem';
 import { annualTotalAmount, monthlyAverageAmount } from '../helpers/service';
 
@@ -12,5 +13,9 @@ const TotalPriceList = ({ services }) => (
     </TotalPriceItem>
   </div>
 );
+
+TotalPriceList.propTypes = {
+  services: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default TotalPriceList;
