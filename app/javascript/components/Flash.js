@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Flash extends React.Component {
   constructor(props) {
@@ -56,3 +57,7 @@ class Flash extends React.Component {
 }
 
 export default Flash;
+
+Flash.propTypes = {
+  services: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
