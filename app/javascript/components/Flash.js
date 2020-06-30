@@ -9,6 +9,17 @@ class Flash extends React.Component {
   }
 
   componentDidMount() {
+    this.fetchFlash();
+  }
+
+  componentDidUpdate(prevProps) {
+    const { services } = this.props;
+    if (services !== prevProps.services) {
+      this.fetchFlash();
+    }
+  }
+
+  fetchFlash() {
     fetch('/api/flash', {
       method: 'GET',
     })
