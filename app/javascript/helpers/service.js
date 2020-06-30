@@ -5,6 +5,12 @@ const totalAmount = (services, plan) => {
   );
 };
 
-export const annualTotalAmount = (services) => totalAmount(services, 'yearly') + (totalAmount(services, 'monthly') * 12);
+export const annualTotalAmount = (services) => {
+  const annualTotalPrice = totalAmount(services, 'yearly') + (totalAmount(services, 'monthly') * 12);
+  return Math.floor(annualTotalPrice);
+};
 
-export const monthlyAverageAmount = (services) => annualTotalAmount(services) / 12;
+export const monthlyAverageAmount = (services) => {
+  const monthlyAveragePrice = annualTotalAmount(services) / 12;
+  return Math.floor(monthlyAveragePrice);
+};
