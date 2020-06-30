@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Flash extends React.Component {
   constructor(props) {
@@ -9,6 +10,17 @@ class Flash extends React.Component {
   }
 
   componentDidMount() {
+    this.fetchFlash();
+  }
+
+  componentDidUpdate(prevProps) {
+    const { services } = this.props;
+    if (services !== prevProps.services) {
+      this.fetchFlash();
+    }
+  }
+
+  fetchFlash() {
     fetch('/api/flash', {
       method: 'GET',
     })
@@ -45,3 +57,7 @@ class Flash extends React.Component {
 }
 
 export default Flash;
+
+Flash.propTypes = {
+  services: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
