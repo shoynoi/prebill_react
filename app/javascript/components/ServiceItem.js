@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Linkify from 'linkifyjs/react';
 import { formatDate, formatPlan, formatPrice } from '../helpers/service';
+import './ServiceItem.css';
 
 const ServiceItem = ({ service, onDelete }) => (
   <div className="list">
@@ -16,8 +17,8 @@ const ServiceItem = ({ service, onDelete }) => (
         <span className="list-item__remind-text">{formatDate(service.remind_on)}</span>
       </div>
       <div className="list--expandable">
-        <div className="list-item list-item__memo">
-          <Linkify tagName="p" options={{ target: '_blank' }}>{service.description}</Linkify>
+        <div className="list-item">
+          <Linkify className="list-item__memo" tagName="p" options={{ target: '_blank' }}>{service.description}</Linkify>
         </div>
         <div className="list__actions">
           <div className="list__action">
