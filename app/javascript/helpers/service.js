@@ -28,3 +28,14 @@ export const formatDate = (date) => {
   }
   return `${year}年${month}月${day}日`;
 };
+
+export const formatPlan = (plan) => {
+  switch (plan) {
+    case 'monthly':
+      return '月額';
+    case 'yearly':
+      return '年額';
+    default:
+      return null;
+  }
+};
