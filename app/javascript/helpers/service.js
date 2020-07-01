@@ -39,3 +39,5 @@ export const formatPlan = (plan) => {
       return null;
   }
 };
+
+export const formatPrice = (price) => `¥${price.toLocaleString()}`;
