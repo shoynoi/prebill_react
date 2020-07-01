@@ -8,7 +8,7 @@ const TotalPriceItem = ({ amountPrice, color, children }) => (
         {children}
       </div>
       <div className="card__amount">
-        {amountPrice()}
+        {amountPrice}
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@ const TotalPriceItem = ({ amountPrice, color, children }) => (
 export default TotalPriceItem;
 
 TotalPriceItem.propTypes = {
-  amountPrice: PropTypes.func.isRequired,
+  amountPrice: PropTypes.number.isRequired,
   color: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired,
 };
