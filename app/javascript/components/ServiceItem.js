@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { formatDate } from '../helpers/service';
 
 const ServiceItem = ({ service, onDelete }) => (
   <div className="list">
@@ -8,10 +9,10 @@ const ServiceItem = ({ service, onDelete }) => (
       <div className="list-item col-sm">{service.plan}</div>
       <div className="list-item col-sm">{service.price}</div>
       <div className="list-item__renewal">
-        <span className="list-item__renewal-text">{service.renewed_on}</span>
+        <span className="list-item__renewal-text">{formatDate(service.renewed_on)}</span>
       </div>
       <div className="list-item__remind">
-        <span className="list-item__remind-text">{service.remind_on}</span>
+        <span className="list-item__remind-text">{formatDate(service.remind_on)}</span>
       </div>
       <div className="list--expandable">
         <div className="list-item list-item__memo">
