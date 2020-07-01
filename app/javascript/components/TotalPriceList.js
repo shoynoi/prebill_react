@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import TotalPriceItem from './TotalPriceItem';
-import { calcAnnualTotalAmount, monthlyAverageAmount } from '../helpers/service';
+import { calcAnnualTotalAmount, calcMonthlyAverageAmount } from '../helpers/service';
 
 const TotalPriceList = ({ services }) => (
   <div className="card-container">
-    <TotalPriceItem color="yellow" amountPrice={() => monthlyAverageAmount(services)}>
+    <TotalPriceItem color="yellow" amountPrice={() => calcMonthlyAverageAmount(services)}>
       月平均利用額
     </TotalPriceItem>
     <TotalPriceItem color="green" amountPrice={() => calcAnnualTotalAmount(services)}>

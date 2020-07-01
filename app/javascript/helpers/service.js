@@ -10,7 +10,7 @@ export const calcAnnualTotalAmount = (services) => {
   return Math.floor(annualTotalPrice);
 };
 
-export const monthlyAverageAmount = (services) => {
+export const calcMonthlyAverageAmount = (services) => {
   const monthlyAveragePrice = calcAnnualTotalAmount(services) / 12;
   return Math.floor(monthlyAveragePrice);
 };
