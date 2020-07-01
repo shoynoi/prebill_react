@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Linkify from 'linkifyjs/react';
 import { formatDate, formatPlan, formatPrice } from '../helpers/service';
 
 const ServiceItem = ({ service, onDelete }) => (
@@ -16,7 +17,7 @@ const ServiceItem = ({ service, onDelete }) => (
       </div>
       <div className="list--expandable">
         <div className="list-item list-item__memo">
-          <p>{service.description}</p>
+          <Linkify tagName="p" options={{ target: '_blank' }}>{service.description}</Linkify>
         </div>
         <div className="list__actions">
           <div className="list__action">
