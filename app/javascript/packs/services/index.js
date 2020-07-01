@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import UsingServices from '../../components/UsingServices';
 import Flash from '../../components/Flash';
 import getCsrfToken from '../../helpers/getCsrfToken';
+import TotalPriceList from '../../components/TotalPriceList';
 
 class Index extends React.Component {
   constructor(props) {
@@ -64,6 +65,7 @@ class Index extends React.Component {
     return (
       <>
         <Flash services={services} />
+        <TotalPriceList services={services} />
         <UsingServices onDelete={this.deleteService} services={services} />
       </>
     );
