@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { render } from 'react-dom';
 import EditService from '../../components/EditService';
 
@@ -18,3 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
     el,
   );
 });
+
+Edit.propTypes = {
+  serviceId: PropTypes.string,
+};
+
+Edit.defaultProps = {
+  serviceId: '',
+};
