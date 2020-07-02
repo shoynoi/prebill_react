@@ -1,3 +1,31 @@
+// Color
+
+$blue: #1A0DAB;
+$deep_blue: #2E5173;
+$very_light_blue: #F9FAFE;
+
+// Base
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", "游ゴシック体", "Hiragino Sans", "ヒラギノ角ゴ Pro W3", Sans-Serif;
+  line-height: 1.7;
+  background-color: $very_light_blue;
+  color: $deep_blue;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+}
+
+img {
+  max-width: 100%;
+}
+
 //Page Header
 
 .page-header {
