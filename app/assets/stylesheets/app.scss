@@ -59,6 +59,16 @@ img {
   min-width: 8rem;
 }
 
+// list
+
+.list__actions {
+  display: flex;
+}
+
+.list__action:not(:last-child) {
+  padding-right: 1rem;
+}
+
 // Button
 
 .btn {
