@@ -7,21 +7,19 @@ import PageHeaderTitle from './PageHeaderTitle';
 import LinkButton from './LinkButton';
 
 const UsingServices = ({ services, onDelete }) => (
-  <div className="page-body">
+  <>
     <PageHeader>
       <PageHeaderTitle>利用中のサービス</PageHeaderTitle>
       <div className="page-body__actions">
         <LinkButton href="/services/new">新規登録</LinkButton>
       </div>
     </PageHeader>
-    <div className="page-body__inner">
-      <ServiceList>
-        {services.map((service) => (
-          <ServiceItem service={service} onDelete={onDelete} key={service.id} />
-        ))}
-      </ServiceList>
-    </div>
-  </div>
+    <ServiceList>
+      {services.map((service) => (
+        <ServiceItem service={service} onDelete={onDelete} key={service.id} />
+      ))}
+    </ServiceList>
+  </>
 );
 
 export default UsingServices;
