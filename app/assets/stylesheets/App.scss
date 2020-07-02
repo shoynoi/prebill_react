@@ -3,6 +3,11 @@
 $blue: #1A0DAB;
 $deep_blue: #2E5173;
 $very_light_blue: #F9FAFE;
+$light-gray: #DDDDDD;
+
+// Dimensions
+
+$header-height: 3rem;
 
 // Base
 
@@ -30,6 +35,16 @@ a {
 
 img {
   max-width: 100%;
+}
+
+//Page
+
+.page {
+  border: 1px solid $light-gray;
+  background-color: white;
+  min-height: calc(100vh - #{$header-height});
+  padding: 2rem 1.875rem 0;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
 }
 
 //Page Header
