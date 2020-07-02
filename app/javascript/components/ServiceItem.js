@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Linkify from 'linkifyjs/react';
 import { formatDate, formatPlan, formatPrice } from '../helpers/service';
+import LinkButton from './LinkButton';
 
 const ServiceItem = ({ service, onDelete }) => (
   <div className="list">
@@ -21,7 +22,7 @@ const ServiceItem = ({ service, onDelete }) => (
         </div>
         <div className="list__actions">
           <div className="list__action">
-            <a href={`services/${service.id}/edit`} className="btn--full btn--sm btn--secondary">修正</a>
+            <LinkButton href={`services/${service.id}/edit`} color="btn--secondary" size="btn--sm">修正</LinkButton>
           </div>
           <div className="list__action">
             <button type="button" onClick={() => onDelete(service.id)}>削除</button>

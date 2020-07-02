@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ValidationErrors from './ValidationErrors';
+import LinkButton from './LinkButton';
 
 class ServiceForm extends React.Component {
   constructor(props) {
@@ -135,7 +136,7 @@ class ServiceForm extends React.Component {
               <input type="submit" value="登録" name="commit" />
             </li>
             <li className="form-actions__item--cancel">
-              <a href="/">キャンセル</a>
+              <LinkButton href="/" color="btn--secondary" size="btn--md">キャンセル</LinkButton>
             </li>
           </ul>
         </form>
