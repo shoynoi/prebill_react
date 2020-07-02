@@ -1,21 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Linkify from 'linkifyjs/react';
+import { formatDate, formatPlan, formatPrice } from '../helpers/service';
+import './ServiceItem.css';
 
 const ServiceItem = ({ service, onDelete }) => (
   <div className="list">
     <div className="list--display">
       <div className="list-item col-lg">{service.name}</div>
-      <div className="list-item col-sm">{service.plan}</div>
-      <div className="list-item col-sm">{service.price}</div>
+      <div className="list-item col-sm">{formatPlan(service.plan)}</div>
+      <div className="list-item col-sm">{formatPrice(service.price)}</div>
       <div className="list-item__renewal">
-        <span className="list-item__renewal-text">{service.renewed_on}</span>
+        <span className="list-item__renewal-text">{formatDate(service.renewed_on)}</span>
       </div>
       <div className="list-item__remind">
-        <span className="list-item__remind-text">{service.remind_on}</span>
+        <span className="list-item__remind-text">{formatDate(service.remind_on)}</span>
       </div>
       <div className="list--expandable">
-        <div className="list-item list-item__memo">
-          <p>{service.description}</p>
+        <div className="list-item">
+          <Linkify className="list-item__memo" tagName="p" options={{ target: '_blank' }}>{service.description}</Linkify>
         </div>
         <div className="list__actions">
           <div className="list__action">
