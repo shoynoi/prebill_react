@@ -147,6 +147,25 @@ img {
   padding: 0 .5rem;
 }
 
+// list label
+
+.list__labels {
+  display: flex;
+  padding: 0 1.5rem;
+}
+
+.list__label {
+  flex: 1 1 15%;
+  font-size: .8rem;
+  color: #666666;
+  &.col-lg {
+    flex: 1 1 25%;
+  }
+  &.col-sm {
+    flex: 1 1 10%;
+  }
+}
+
 // list-item
 
 .list-item__memo {
