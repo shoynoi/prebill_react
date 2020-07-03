@@ -3,12 +3,34 @@ import PropTypes from 'prop-types';
 import ListDisplayedItem from './ListDisplayedItem';
 import ListExpandableItem from './ListExpandableItem';
 
-const ServiceItem = ({ service, onDelete }) => (
-  <div className="list-item">
-    <ListDisplayedItem service={service} />
-    <ListExpandableItem service={service} onDelete={onDelete} />
-  </div>
-);
+class ServiceItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isExpand: false,
+    };
+
+    this.handleExpand = this.handleExpand.bind(this);
+  }
+
+  handleExpand() {
+    this.setState((prevState) => ({
+      isExpand: !prevState.isExpand,
+    }));
+  }
+
+  render() {
+    const { service, onDelete } = this.props;
+    const { isExpand } = this.state;
+
+    return (
+      <div className="list-item">
+        <ListDisplayedItem service={service} onClick={this.handleExpand} isExpand={isExpand} />
+        <ListExpandableItem service={service} onDelete={onDelete} isExpand={isExpand} />
+      </div>
+    );
+  }
+}
 
 export default ServiceItem;
 
