@@ -4,36 +4,35 @@ import Linkify from 'linkifyjs/react';
 import { formatDate, formatPlan, formatPrice } from '../helpers/service';
 import LinkButton from './LinkButton';
 import Button from './Button';
+import ServiceItemElement from './ServiceItemElement';
 
 const ServiceItem = ({ service, onDelete }) => (
   <div className="list">
     <div className="list--display">
-      <div className="list-item col-lg">{service.name}</div>
-      <div className="list-item col-sm">{formatPlan(service.plan)}</div>
-      <div className="list-item col-sm">{formatPrice(service.price)}</div>
-      <div className="list-item__renewal">
-        <span className="list-item__renewal-text">{formatDate(service.renewed_on)}</span>
+      <ServiceItemElement size="col-lg">
+        <span className="list-item__title">{service.name}</span>
+      </ServiceItemElement>
+      <ServiceItemElement size="col-sm">{formatPlan(service.plan)}</ServiceItemElement>
+      <ServiceItemElement size="col-sm">{formatPrice(service.price)}</ServiceItemElement>
+      <ServiceItemElement>{formatDate(service.renewed_on)}</ServiceItemElement>
+      <ServiceItemElement>{formatDate(service.remind_on)}</ServiceItemElement>
+    </div>
+    <div className="list--expandable">
+      <div className="list-item">
+        <Linkify className="list-item__memo" tagName="p" options={{ target: '_blank' }}>{service.description}</Linkify>
       </div>
-      <div className="list-item__remind">
-        <span className="list-item__remind-text">{formatDate(service.remind_on)}</span>
-      </div>
-      <div className="list--expandable">
-        <div className="list-item">
-          <Linkify className="list-item__memo" tagName="p" options={{ target: '_blank' }}>{service.description}</Linkify>
+      <div className="list__actions">
+        <div className="list__action">
+          <LinkButton href={`services/${service.id}/edit`} color="secondary" size="sm">修正</LinkButton>
         </div>
-        <div className="list__actions">
-          <div className="list__action">
-            <LinkButton href={`services/${service.id}/edit`} color="secondary" size="sm">修正</LinkButton>
-          </div>
-          <div className="list__action">
-            <Button
-              onClick={() => onDelete(service.id)}
-              color="danger"
-              size="sm"
-            >
-              削除
-            </Button>
-          </div>
+        <div className="list__action">
+          <Button
+            onClick={() => onDelete(service.id)}
+            color="danger"
+            size="sm"
+          >
+            削除
+          </Button>
         </div>
       </div>
     </div>
