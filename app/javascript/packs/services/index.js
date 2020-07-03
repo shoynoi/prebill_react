@@ -63,11 +63,13 @@ class Index extends React.Component {
     }
 
     return (
-      <>
+      <div className="container">
         <Flash services={services} />
-        <TotalPriceList services={services} />
-        <UsingServices onDelete={this.deleteService} services={services} />
-      </>
+        <main className="page">
+          <TotalPriceList services={services} />
+          <UsingServices onDelete={this.deleteService} services={services} />
+        </main>
+      </div>
     );
   }
 }
