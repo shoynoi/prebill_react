@@ -1,6 +1,7 @@
 import React from 'react';
 import getCsrfToken from '../helpers/getCsrfToken';
 import AuthForm from './AuthForm';
+import AuthFormHeader from './AuthFormHeader';
 
 class NewUser extends React.Component {
   constructor(props) {
@@ -44,11 +45,7 @@ class NewUser extends React.Component {
       <>
         <h1 className="auth-form-logo">PreBill</h1>
         <div className="auth-form">
-          <header className="auth-form__header">
-            <h1 className="auth-form__title">
-              アカウント作成
-            </h1>
-          </header>
+          <AuthFormHeader>アカウント作成</AuthFormHeader>
           <AuthForm onSubmit={this.createUser} errorMessages={errorMessages} />
           <footer className="auth-form__footer">
             <nav className="auth-form-nav">
