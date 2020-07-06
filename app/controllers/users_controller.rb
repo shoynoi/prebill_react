@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
+  wrap_parameters :user, include: [:name, :email, :password, :password_confirmation]
+
   def new
   end
 
