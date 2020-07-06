@@ -28,8 +28,8 @@ const ServiceItem = ({ service, onDelete }) => (
           <div className="list__action">
             <Button
               onClick={() => onDelete(service.id)}
-              color="btn--danger"
-              size="btn--sm"
+              color="danger"
+              size="sm"
             >
               削除
             </Button>

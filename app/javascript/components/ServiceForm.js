@@ -136,9 +136,9 @@ class ServiceForm extends React.Component {
             <li className="form-actions__item">
               <Button
                 onClick={() => { document.getElementById('service-form').dispatchEvent(new Event('submit')); }}
-                color="btn--primary"
-                size="btn--md"
-                block="btn--block"
+                color="primary"
+                size="md"
+                block="block"
               >
                 登録
               </Button>
