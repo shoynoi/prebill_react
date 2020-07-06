@@ -13,5 +13,5 @@ ListLabelItem.propTypes = {
 };
 
 ListLabelItem.defaultProps = {
-  colSize: '',
+  colSize: 'md',
 };

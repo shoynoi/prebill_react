@@ -145,7 +145,6 @@ img {
 }
 
 .list__label {
-  flex: 1 1 15%;
   font-size: .8rem;
   color: #666666;
   &.col-lg {
@@ -153,6 +152,9 @@ img {
   }
   &.col-sm {
     flex: 1 1 10%;
+  }
+  &.col-md {
+    flex: 1 1 15%;
   }
 }
 
