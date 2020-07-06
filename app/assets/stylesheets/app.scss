@@ -1,0 +1,154 @@
+// Color
+
+$blue: #1A0DAB;
+$deep_blue: #2E5173;
+$very_light_blue: #F9FAFE;
+$light-gray: #DDDDDD;
+
+// Dimensions
+
+$header-height: 3rem;
+
+// Base
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", "游ゴシック体", "Hiragino Sans", "ヒラギノ角ゴ Pro W3", Sans-Serif;
+  line-height: 1.7;
+  background-color: $very_light_blue;
+  color: $deep_blue;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+}
+
+img {
+  max-width: 100%;
+}
+
+//Page
+
+.page {
+  border: 1px solid $light-gray;
+  background-color: white;
+  min-height: calc(100vh - #{$header-height});
+  padding: 2rem 1.875rem 0;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+}
+
+//Page Header
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header__action {
+  min-width: 8rem;
+}
+
+// list
+
+.list__actions {
+  display: flex;
+}
+
+.list__action:not(:last-child) {
+  padding-right: 1rem;
+}
+
+// Button
+
+.btn {
+  color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  user-select: none;
+  transition: all ease-out .2s;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.btn--sm {
+  height: 1.5rem;
+  padding: 0 .5rem;
+  font-size: .8rem;
+}
+
+.btn--md {
+  height: 2.3rem;
+  padding: 0 .5rem;
+  font-size: .8rem;
+}
+
+.btn--primary {
+  border: 1px solid #2274E5;
+  background-color: #2274E5;
+  &:hover {
+    background-color: #1267E6;
+    border-color: #2274E5;
+  }
+}
+
+.btn--secondary {
+  color: #444444;
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  letter-spacing: normal;
+  &:hover {
+    border-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.btn--danger {
+  border: 1px solid #FF5555;
+  background-color: #F0514F;
+  &:hover {
+    background-color: #e44e4e;
+    border: 1px solid #e44e4e;
+  }
+}
+
+.btn--block {
+  width: 100%;
+}
+
+// form
+
+.form-actions__items {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.form-actions__item {
+  padding: 0 .5rem;
+  min-width: 12rem;
+}
+
+.form-actions__item--cancel {
+  padding: 0 .5rem;
+}
+
+// list-item
+
+.list-item__memo {
+  white-space: pre-line;
+}
