@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ListLabelItem = ({ colSize, children }) => (
-  <div className={`list__label ${colSize}`}>{children}</div>
+  <div className={`list__label col-${colSize}`}>{children}</div>
 );
 
 export default ListLabelItem;
