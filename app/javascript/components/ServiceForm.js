@@ -144,7 +144,7 @@ class ServiceForm extends React.Component {
               </Button>
             </li>
             <li className="form-actions__item--cancel">
-              <LinkButton href="/" color="btn--secondary" size="btn--md">キャンセル</LinkButton>
+              <LinkButton href="/" color="secondary" size="md">キャンセル</LinkButton>
             </li>
           </ul>
         </form>

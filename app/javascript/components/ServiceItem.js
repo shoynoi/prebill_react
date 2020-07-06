@@ -23,7 +23,7 @@ const ServiceItem = ({ service, onDelete }) => (
         </div>
         <div className="list__actions">
           <div className="list__action">
-            <LinkButton href={`services/${service.id}/edit`} color="btn--secondary" size="btn--sm">修正</LinkButton>
+            <LinkButton href={`services/${service.id}/edit`} color="secondary" size="sm">修正</LinkButton>
           </div>
           <div className="list__action">
             <Button

@@ -11,7 +11,7 @@ const UsingServices = ({ services, onDelete }) => (
     <PageHeader>
       <PageHeaderTitle>利用中のサービス</PageHeaderTitle>
       <div className="page-header__action">
-        <LinkButton href="/services/new" color="btn--primary" size="btn--md">新規登録</LinkButton>
+        <LinkButton href="/services/new" color="primary" size="md">新規登録</LinkButton>
       </div>
     </PageHeader>
     <ServiceList>
