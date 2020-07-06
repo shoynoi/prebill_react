@@ -6,11 +6,11 @@ import ExpandButton from './ExpandButton';
 
 const ListDisplayedItem = ({ service, onClick, isExpand }) => (
   <div className="list-item--display">
-    <ServiceItemElement size="col-lg">
+    <ServiceItemElement size="lg">
       <span className="list-item__title">{service.name}</span>
     </ServiceItemElement>
-    <ServiceItemElement size="col-sm">{formatPlan(service.plan)}</ServiceItemElement>
-    <ServiceItemElement size="col-sm">{formatPrice(service.price)}</ServiceItemElement>
+    <ServiceItemElement size="sm">{formatPlan(service.plan)}</ServiceItemElement>
+    <ServiceItemElement size="sm">{formatPrice(service.price)}</ServiceItemElement>
     <ServiceItemElement>{formatDate(service.renewed_on)}</ServiceItemElement>
     <ServiceItemElement>{formatDate(service.remind_on)}</ServiceItemElement>
     <ExpandButton onClick={onClick} isExpand={isExpand} />

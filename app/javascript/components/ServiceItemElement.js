@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ServiceItemElement = ({ size, children }) => (
-  <div className={`list-item__element ${size}`}>{children}</div>
+  <div className={`list-item__element col-${size}`}>{children}</div>
 );
 
 export default ServiceItemElement;
@@ -16,5 +16,5 @@ ServiceItemElement.propTypes = {
 };
 
 ServiceItemElement.defaultProps = {
-  size: '',
+  size: 'md',
 };

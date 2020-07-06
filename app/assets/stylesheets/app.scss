@@ -231,12 +231,14 @@ img {
 }
 
 .list-item__element {
-  flex: 1 1 15%;
   font-size: .9rem;
   &.col-lg {
     flex: 1 1 25%;
   }
   &.col-sm {
     flex: 1 1 10%;
+  }
+  &.col-md {
+    flex: 1 1 15%;
   }
 }
