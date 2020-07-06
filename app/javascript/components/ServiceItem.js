@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Linkify from 'linkifyjs/react';
 import { formatDate, formatPlan, formatPrice } from '../helpers/service';
-import './ServiceItem.css';
 
 const ServiceItem = ({ service, onDelete }) => (
   <div className="list">
