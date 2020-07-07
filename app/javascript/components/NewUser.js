@@ -45,7 +45,9 @@ class NewUser extends React.Component {
     const { errorMessages } = this.state;
     return (
       <>
-        <h1 className="auth-form-logo">PreBill</h1>
+        <h1 className="auth-form-logo">
+          <a href="/" className="auth-form-logo__link">PreBill</a>
+        </h1>
         <div className="auth-form">
           <AuthFormHeader>アカウント作成</AuthFormHeader>
           <AuthForm onSubmit={this.createUser} errorMessages={errorMessages} />
