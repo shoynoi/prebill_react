@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ValidationErrors from './ValidationErrors';
+import LinkButton from './LinkButton';
+import Button from './Button';
 
 class ServiceForm extends React.Component {
   constructor(props) {
@@ -45,7 +47,7 @@ class ServiceForm extends React.Component {
 
         <ValidationErrors errorMessages={errorMessages} />
 
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} id="service-form">
           <div className="form-items">
             <div className="form-item">
               <label htmlFor="service_name">
@@ -132,10 +134,17 @@ class ServiceForm extends React.Component {
           </div>
           <ul className="form-actions__items">
             <li className="form-actions__item">
-              <input type="submit" value="登録" name="commit" />
+              <Button
+                onClick={() => { document.getElementById('service-form').dispatchEvent(new Event('submit')); }}
+                color="primary"
+                size="md"
+                isBlock
+              >
+                登録
+              </Button>
             </li>
             <li className="form-actions__item--cancel">
-              <a href="/">キャンセル</a>
+              <LinkButton href="/" color="secondary" size="md">キャンセル</LinkButton>
             </li>
           </ul>
         </form>
