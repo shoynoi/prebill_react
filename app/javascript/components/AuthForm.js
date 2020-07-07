@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ValidationErrors from './ValidationErrors';
+import Button from './Button';
 
 class AuthForm extends React.Component {
   constructor(props) {
@@ -43,7 +44,7 @@ class AuthForm extends React.Component {
 
       <div className="auth-form__body">
         <ValidationErrors errorMessages={errorMessages} />
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} id="user-form">
           <div className="form-items--block">
             <div className="form-item--block">
               <label htmlFor="user_name">
@@ -100,7 +101,14 @@ class AuthForm extends React.Component {
           </div>
           <ul className="form-actions__items">
             <li className="form-actions__item">
-              <input type="submit" value="アカウントを作成する" name="commit" />
+              <Button
+                onClick={() => { document.getElementById('user-form').dispatchEvent(new Event('submit')); }}
+                size="lg"
+                color="primary"
+                block="block"
+              >
+                アカウントを作成する
+              </Button>
             </li>
           </ul>
         </form>
