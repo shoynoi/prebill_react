@@ -70,20 +70,20 @@ class AccountForm extends React.Component {
                   placeholder="Eメール"
                 />
               </label>
-              <div className="form-item--block">
-                <label htmlFor="user_password">
-                  <strong className="form-item__label--block">パスワード</strong>
-                  <input
-                    type="password"
-                    className="form-item__text-input--block"
-                    id="user_password"
-                    name="password"
-                    onChange={this.handleInputChange}
-                    placeholder="パスワード"
-                  />
-                </label>
-                <p className="form-item__help">6字以上</p>
-              </div>
+            </div>
+            <div className="form-item--block">
+              <label htmlFor="user_password">
+                <strong className="form-item__label--block">パスワード</strong>
+                <input
+                  type="password"
+                  className="form-item__text-input--block"
+                  id="user_password"
+                  name="password"
+                  onChange={this.handleInputChange}
+                  placeholder="パスワード"
+                />
+              </label>
+              <p className="form-item__help">6字以上</p>
             </div>
             <div className="form-item--block">
               <label htmlFor="user_password_confirmation">
