@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ValidationErrors from './ValidationErrors';
 import Button from './Button';
 
-class AuthForm extends React.Component {
+class AccountForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -117,15 +117,15 @@ class AuthForm extends React.Component {
   }
 }
 
-export default AuthForm;
+export default AccountForm;
 
-AuthForm.propTypes = {
+AccountForm.propTypes = {
   user: PropTypes.objectOf(PropTypes.string),
   onSubmit: PropTypes.func.isRequired,
   errorMessages: PropTypes.arrayOf(PropTypes.string),
 };
 
-AuthForm.defaultProps = {
+AccountForm.defaultProps = {
   user: {
     name: '',
     email: '',

@@ -1,6 +1,6 @@
 import React from 'react';
 import getCsrfToken from '../helpers/getCsrfToken';
-import AuthForm from './AuthForm';
+import AccountForm from './AccountForm';
 import AuthFormHeader from './AuthFormHeader';
 import AuthFormFooter from './AuthFormFooter';
 import AuthFormFooterLink from './AuthFormFooterLink';
@@ -50,7 +50,7 @@ class NewUser extends React.Component {
         </h1>
         <div className="auth-form">
           <AuthFormHeader>アカウント作成</AuthFormHeader>
-          <AuthForm onSubmit={this.createUser} errorMessages={errorMessages} />
+          <AccountForm onSubmit={this.createUser} errorMessages={errorMessages} />
           <AuthFormFooter>
             <AuthFormFooterLink href="/">トップページ</AuthFormFooterLink>
             <AuthFormFooterLink href="/login">ログイン</AuthFormFooterLink>
