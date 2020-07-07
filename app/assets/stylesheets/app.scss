@@ -306,3 +306,67 @@ img {
     flex: 1 1 15%;
   }
 }
+
+// Header
+
+.header {
+  background-color: #1A5084;
+}
+
+header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  width: 100%;
+}
+
+.header-title {
+  font-size: 1.835rem;
+  font-family: "American Typewriter";
+}
+
+.header-title__link {
+  color: #fafafa;
+  text-decoration: none;
+  padding: 2px 7px;
+  transition: all ease-out .08s;
+  &:hover {
+    color: white;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 4px;
+  }
+}
+
+.header-nav {
+  height: 100%;
+  position: relative;
+}
+
+.header-nav__items {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-nav__item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.header-nav__button {
+  font-weight: bold;
+  padding: 2px 7px;
+  font-size: .9rem;
+  color: #fafafa;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  transition: all ease-out .08s;
+  &:hover {
+    color: white;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 4px;
+  }
+}
