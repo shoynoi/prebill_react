@@ -1,11 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
 import NewUser from '../../components/NewUser';
+import Welcome from '../application/welcome';
 
 const New = () => (
-  <div className="container">
+  <Welcome>
     <NewUser />
-  </div>
+  </Welcome>
 );
 
 document.addEventListener('DOMContentLoaded', () => {

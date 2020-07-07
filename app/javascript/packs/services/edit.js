@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { render } from 'react-dom';
 import EditService from '../../components/EditService';
+import App from '../application/app';
 
 const Edit = ({ serviceId }) => (
-  <div className="container">
+  <App>
     <main className="page">
       <EditService serviceId={serviceId} />
     </main>
-  </div>
+  </App>
 );
 
 document.addEventListener('DOMContentLoaded', () => {

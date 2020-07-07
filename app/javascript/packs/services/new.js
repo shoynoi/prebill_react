@@ -1,13 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
 import NewService from '../../components/NewService';
+import App from '../application/app';
 
 const New = () => (
-  <div className="container">
+  <App>
     <main className="page">
       <NewService />
     </main>
-  </div>
+  </App>
 );
 
 document.addEventListener('DOMContentLoaded', () => {
