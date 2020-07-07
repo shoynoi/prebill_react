@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = ({
-  onClick, children, color, size, block,
+  onClick, children, color, size, isBlock,
 }) => {
-  const btnBlock = block === '' ? '' : `btn--${block}`;
+  const block = isBlock ? 'btn--block' : '';
   return (
-    <button type="button" onClick={() => onClick()} className={`btn btn--${color} btn--${size} ${btnBlock}`}>{children}</button>
+    <button type="button" onClick={() => onClick()} className={`btn btn--${color} btn--${size} ${block}`}>{children}</button>
   );
 };
 
@@ -17,9 +17,9 @@ Button.propTypes = {
   children: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   size: PropTypes.string.isRequired,
-  block: PropTypes.string,
+  isBlock: PropTypes.bool,
 };
 
 Button.defaultProps = {
-  block: '',
+  isBlock: false,
 };
