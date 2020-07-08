@@ -2,6 +2,7 @@
 
 class UsersController < ApplicationController
   wrap_parameters :user, include: [:name, :email, :password, :password_confirmation]
+  skip_before_action :require_login
 
   def new
   end
