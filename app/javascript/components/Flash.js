@@ -59,5 +59,9 @@ class Flash extends React.Component {
 export default Flash;
 
 Flash.propTypes = {
-  services: PropTypes.arrayOf(PropTypes.object).isRequired,
+  services: PropTypes.arrayOf(PropTypes.object),
+};
+
+Flash.defaultProps = {
+  services: undefined,
 };
