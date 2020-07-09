@@ -5,7 +5,9 @@ class Api::FlashController < ApplicationController
 
   def index
     respond_to do |format|
-      format.json { render json: flash.to_hash }
+      message = flash.to_hash
+      flash.clear
+      format.json { render json: message }
     end
   end
 end
