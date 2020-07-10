@@ -371,6 +371,19 @@ header > .container {
   }
 }
 
+.header-nav__link {
+  font-weight: bold;
+  padding: 2px 7px;
+  font-size: .9rem;
+  color: #fafafa;
+  transition: all ease-out .08s;
+  &:hover {
+    color: white;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 4px;
+  }
+}
+
 // footer
 
 .footer {
