@@ -40,7 +40,7 @@ class ServiceForm extends React.Component {
 
   render() {
     const { service } = this.state;
-    const { errorMessages } = this.props;
+    const { errorMessages, children } = this.props;
 
     return (
       <div>
@@ -140,7 +140,7 @@ class ServiceForm extends React.Component {
                 size="md"
                 isBlock
               >
-                登録
+                {children}
               </Button>
             </li>
             <li className="form-actions__item--cancel">

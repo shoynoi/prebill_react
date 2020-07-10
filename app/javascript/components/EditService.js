@@ -69,7 +69,9 @@ class EditService extends React.Component {
           service={service}
           onSubmit={this.updateService}
           errorMessages={errorMessages}
-        />
+        >
+          修正
+        </ServiceForm>
       </div>
     );
   }
