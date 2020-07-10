@@ -1,12 +1,7 @@
 # frozen_string_literal: true
 
 class AddUserRefToServices < ActiveRecord::Migration[6.0]
-  def up
-    execute "DELETE FROM services;"
-    add_reference :services, :user, null: false, foreign_key: true, index: true
-  end
-
-  def down
-    remove_reference :services, :user, index: true
+  def change
+    add_reference :services, :user, foreign_key: true, index: true
   end
 end
