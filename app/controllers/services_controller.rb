@@ -4,7 +4,7 @@ class ServicesController < ApplicationController
   before_action :load_service, only: %i(edit update destroy)
 
   def index
-    @services = Service.all
+    @services = current_user.services.all
     respond_to do |format|
       format.json { render json: @services }
     end
@@ -14,7 +14,7 @@ class ServicesController < ApplicationController
   end
 
   def create
-    @service = Service.new(service_params)
+    @service = current_user.services.build(service_params)
     if @service.save
       flash.notice = "サービスを登録しました。"
       head :ok
@@ -63,6 +63,6 @@ class ServicesController < ApplicationController
     end
 
     def load_service
-      @service = Service.find(params[:id])
+      @service = current_user.services.find(params[:id])
     end
 end

@@ -2,6 +2,7 @@
 
 class Service < ApplicationRecord
   enum plan: { monthly: 0, yearly: 1 }
+  belongs_to :user
 
   validates :name, presence: true
   validates :plan, presence: true
