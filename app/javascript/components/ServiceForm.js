@@ -40,7 +40,8 @@ class ServiceForm extends React.Component {
 
   render() {
     const { service } = this.state;
-    const { errorMessages, children } = this.props;
+    const { errorMessages, action } = this.props;
+    const buttonLabel = action === 'create' ? '登録' : '修正';
 
     return (
       <div>
@@ -140,7 +141,7 @@ class ServiceForm extends React.Component {
                 size="md"
                 isBlock
               >
-                {children}
+                {buttonLabel}
               </Button>
             </li>
             <li className="form-actions__item--cancel">
@@ -166,6 +167,7 @@ ServiceForm.propTypes = {
   }),
   onSubmit: PropTypes.func.isRequired,
   errorMessages: PropTypes.arrayOf(PropTypes.string),
+  action: PropTypes.string.isRequired,
 };
 
 ServiceForm.defaultProps = {
