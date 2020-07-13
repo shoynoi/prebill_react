@@ -1,5 +1,6 @@
 import React from 'react';
-import deleteSession from '../helpers/authentication';
+import PropTypes from 'prop-types';
+import HeaderMenu from './HeaderMenu';
 
 const UserNav = ({ user }) => (
   <div className="header-nav__items">
@@ -10,3 +11,7 @@ const UserNav = ({ user }) => (
 );
 
 export default UserNav;
+
+UserNav.propTypes = {
+  user: PropTypes.objectOf(PropTypes.string).isRequired,
+};
