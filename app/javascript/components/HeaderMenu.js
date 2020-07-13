@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import onClickOutside from 'react-onclickoutside';
 import deleteSession from '../helpers/authentication';
 
@@ -36,6 +38,7 @@ class HeaderMenu extends React.Component {
             onClick={this.toggleDropdown}
           >
             {user.name}
+            <span className="header-menu__icon"><FontAwesomeIcon icon={faCaretDown} /></span>
           </button>
         </div>
         {
