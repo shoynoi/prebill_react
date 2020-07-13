@@ -9,7 +9,7 @@ class MyAccountController < ApplicationController
   def show
     if logged_in?
       respond_to do |format|
-        format.json { render json: current_user, only: [:name] }
+        format.json { render json: current_user, only: [:name, :email] }
       end
     else
       head :no_content
