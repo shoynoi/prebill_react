@@ -39,6 +39,7 @@ class AccountForm extends React.Component {
 
   render() {
     const { errorMessages } = this.props;
+    const { user } = this.state;
 
     return (
 
@@ -55,6 +56,7 @@ class AccountForm extends React.Component {
                   id="user_name"
                   name="name"
                   placeholder="ユーザー名"
+                  value={user.name}
                   onChange={this.handleInputChange}
                 />
               </label>
@@ -68,6 +70,7 @@ class AccountForm extends React.Component {
                   onChange={this.handleInputChange}
                   className="form-item__text-input--block"
                   placeholder="Eメール"
+                  value={user.email}
                 />
               </label>
             </div>
