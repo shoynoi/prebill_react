@@ -41,7 +41,7 @@ class HeaderNav extends React.Component {
     return (
       <nav className="header-nav">
         {user
-          ? <UserNav />
+          ? <UserNav user={user} />
           : <AccountNav />}
       </nav>
     );

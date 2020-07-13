@@ -1,10 +1,10 @@
 import React from 'react';
 import deleteSession from '../helpers/authentication';
 
-const UserNav = () => (
+const UserNav = ({ user }) => (
   <div className="header-nav__items">
     <div className="header-nav__item">
-      <button type="button" className="header-nav__link" onClick={() => deleteSession()}>ログアウト</button>
+      <HeaderMenu user={user} />
     </div>
   </div>
 );
