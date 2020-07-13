@@ -109,7 +109,7 @@ class AccountForm extends React.Component {
                 onClick={() => { document.getElementById('user-form').dispatchEvent(new Event('submit')); }}
                 size="lg"
                 color="primary"
-                block="block"
+                isBlock
               >
                 {buttonLabel}
               </Button>
