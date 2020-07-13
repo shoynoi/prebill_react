@@ -16,5 +16,7 @@ const Welcome = ({ children }) => (
 export default Welcome;
 
 Welcome.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType(
+    [PropTypes.element, PropTypes.arrayOf(PropTypes.element)],
+  ).isRequired,
 };
