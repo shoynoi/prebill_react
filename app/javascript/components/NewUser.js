@@ -50,7 +50,11 @@ class NewUser extends React.Component {
         </h1>
         <div className="auth-form">
           <AuthFormHeader>アカウント作成</AuthFormHeader>
-          <AccountForm onSubmit={this.createUser} errorMessages={errorMessages} />
+          <AccountForm
+            onSubmit={this.createUser}
+            errorMessages={errorMessages}
+            action="create"
+          />
           <AuthFormFooter>
             <AuthFormFooterLink href="/">トップページ</AuthFormFooterLink>
             <AuthFormFooterLink href="/login">ログイン</AuthFormFooterLink>

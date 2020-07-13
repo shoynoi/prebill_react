@@ -38,8 +38,9 @@ class AccountForm extends React.Component {
   }
 
   render() {
-    const { errorMessages } = this.props;
+    const { errorMessages, action } = this.props;
     const { user } = this.state;
+    const buttonLabel = action === 'create' ? 'アカウントを作成する' : '更新する';
 
     return (
 
@@ -110,7 +111,7 @@ class AccountForm extends React.Component {
                 color="primary"
                 block="block"
               >
-                アカウントを作成する
+                {buttonLabel}
               </Button>
             </li>
           </ul>
@@ -126,6 +127,7 @@ AccountForm.propTypes = {
   user: PropTypes.objectOf(PropTypes.string),
   onSubmit: PropTypes.func.isRequired,
   errorMessages: PropTypes.arrayOf(PropTypes.string),
+  action: PropTypes.string.isRequired,
 };
 
 AccountForm.defaultProps = {
