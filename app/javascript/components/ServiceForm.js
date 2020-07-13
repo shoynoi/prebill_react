@@ -97,7 +97,7 @@ class ServiceForm extends React.Component {
                 className="form-item__text-input"
                 id="service_renewed_on"
                 name="renewed_on"
-                value={service.renewed_on}
+                value={service.renewed_on || ''}
                 onChange={this.handleInputChange}
               />
             </label>
@@ -108,7 +108,7 @@ class ServiceForm extends React.Component {
                 className="form-item__text-input"
                 id="service_remind_on"
                 name="remind_on"
-                value={service.remind_on}
+                value={service.remind_on || ''}
                 onChange={this.handleInputChange}
               />
             </label>
