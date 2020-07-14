@@ -8,6 +8,8 @@ class Service < ApplicationRecord
   validates :plan, presence: true
   validates :price, numericality: { only_integer: true, allow_blank: true }
 
+  scope :remind, -> { where(remind_on: Date.today) }
+
   def self.renewal
     Service.select { |service| service.next_renewed_on == Date.today }
   end
