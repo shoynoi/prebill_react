@@ -11,7 +11,7 @@ const ListDisplayedItem = ({ service, onClick, isExpand }) => (
     </ServiceItemElement>
     <ServiceItemElement size="sm">{formatPlan(service.plan)}</ServiceItemElement>
     <ServiceItemElement size="sm">{formatPrice(service.price)}</ServiceItemElement>
-    <ServiceItemElement>{formatDate(service.renewed_on)}</ServiceItemElement>
+    <ServiceItemElement>{formatDate(service.next_renewed_on)}</ServiceItemElement>
     <ServiceItemElement>{formatDate(service.remind_on)}</ServiceItemElement>
     <ExpandButton onClick={onClick} isExpand={isExpand} />
   </div>
@@ -26,6 +26,7 @@ ListDisplayedItem.propTypes = {
     plan: PropTypes.string,
     price: PropTypes.number,
     renewed_on: PropTypes.string,
+    next_renewed_on: PropTypes.string,
     remind_on: PropTypes.string,
   }),
   onClick: PropTypes.func.isRequired,
