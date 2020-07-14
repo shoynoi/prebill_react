@@ -42,7 +42,11 @@ class NewService extends React.Component {
     const { errorMessages } = this.state;
     return (
       <div>
-        <ServiceForm onSubmit={this.createService} errorMessages={errorMessages} />
+        <ServiceForm
+          onSubmit={this.createService}
+          errorMessages={errorMessages}
+          action="create"
+        />
       </div>
     );
   }
