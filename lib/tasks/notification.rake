@@ -1,0 +1,23 @@
+# frozen_string_literal: true
+
+namespace :notification do
+  desc "Notify user to renewed service."
+  task renewal: :environment do
+    Service.includes(:user).renewal.group_by(&:user).each do |user, services|
+      unless user.renewal_sent_at.try(:between?, Date.today.beginning_of_day, Date.today.end_of_day)
+        UserMailer.renew_services(user, services).deliver_now
+        user.touch(:renewal_sent_at)
+      end
+    end
+  end
+
+  desc "Notify user to remind service."
+  task remind: :environment do
+    Service.includes(:user).remind.group_by(&:user).each do |user, services|
+      unless user.remind_sent_at.try(:between?, Date.today.beginning_of_day, Date.today.end_of_day)
+        UserMailer.remind_services(user, services).deliver_now
+        user.touch(:remind_sent_at)
+      end
+    end
+  end
+end
