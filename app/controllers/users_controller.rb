@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash.notice = "アカウントを作成しました。"
+      auto_login(@user)
       head :ok
     else
       respond_to do |format|
