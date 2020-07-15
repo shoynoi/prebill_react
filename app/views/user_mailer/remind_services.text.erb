@@ -1,0 +1,18 @@
+こんにちは、<%= @user.name %>さん。
+登録されているサブスクリプションがもうすぐ更新されます。
+更新日をご確認ください。
+
+======================================
+<% @services.each do |service| %>
+  サービス名: <%= service.name %>
+  プラン: <%= t "activerecord.enums.service.plan.#{service.plan}"%>
+  料金: <%= number_to_currency(service.price) %>
+  <% if service.renewed_on %>
+  更新日: <%= l service.next_renewed_on %>
+  <% end %>
+  ======================================
+<% end %>
+
+
+PreBill: https://prebill.me/
+メール配信を停止: https://prebill.me/my_account/edit

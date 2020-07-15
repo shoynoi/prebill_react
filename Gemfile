@@ -40,6 +40,7 @@ group :development do
   gem "rubocop"
   gem "rubocop-rails"
   gem "rubocop-performance"
+  gem "letter_opener"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
