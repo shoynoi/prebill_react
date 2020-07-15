@@ -6,7 +6,7 @@ class ServicesController < ApplicationController
   def index
     @services = current_user.services.all
     respond_to do |format|
-      format.json { render json: @services }
+      format.json { render json: @services.map { |service| service.as_json.merge(next_renewed_on: service.next_renewed_on) } }
     end
   end
 
