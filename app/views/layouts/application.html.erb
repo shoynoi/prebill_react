@@ -11,5 +11,9 @@
 
   <body>
     <%= yield %>
+
+    <script>
+      window.message = <%== flash.to_hash.to_json %>
+    </script>
   </body>
 </html>
