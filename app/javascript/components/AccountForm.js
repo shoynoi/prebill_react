@@ -38,7 +38,9 @@ class AccountForm extends React.Component {
   }
 
   render() {
-    const { errorMessages } = this.props;
+    const { errorMessages, action } = this.props;
+    const { user } = this.state;
+    const buttonLabel = action === 'create' ? 'アカウントを作成する' : '更新する';
 
     return (
 
@@ -55,6 +57,7 @@ class AccountForm extends React.Component {
                   id="user_name"
                   name="name"
                   placeholder="ユーザー名"
+                  value={user.name}
                   onChange={this.handleInputChange}
                 />
               </label>
@@ -68,6 +71,7 @@ class AccountForm extends React.Component {
                   onChange={this.handleInputChange}
                   className="form-item__text-input--block"
                   placeholder="Eメール"
+                  value={user.email}
                 />
               </label>
             </div>
@@ -105,9 +109,9 @@ class AccountForm extends React.Component {
                 onClick={() => { document.getElementById('user-form').dispatchEvent(new Event('submit')); }}
                 size="lg"
                 color="primary"
-                block="block"
+                isBlock
               >
-                アカウントを作成する
+                {buttonLabel}
               </Button>
             </li>
           </ul>
@@ -123,6 +127,7 @@ AccountForm.propTypes = {
   user: PropTypes.objectOf(PropTypes.string),
   onSubmit: PropTypes.func.isRequired,
   errorMessages: PropTypes.arrayOf(PropTypes.string),
+  action: PropTypes.string.isRequired,
 };
 
 AccountForm.defaultProps = {

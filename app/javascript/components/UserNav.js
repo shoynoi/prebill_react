@@ -1,12 +1,17 @@
 import React from 'react';
-import deleteSession from '../helpers/authentication';
+import PropTypes from 'prop-types';
+import HeaderMenu from './HeaderMenu';
 
-const UserNav = () => (
+const UserNav = ({ user }) => (
   <div className="header-nav__items">
     <div className="header-nav__item">
-      <button type="button" className="header-nav__link" onClick={() => deleteSession()}>ログアウト</button>
+      <HeaderMenu user={user} />
     </div>
   </div>
 );
 
 export default UserNav;
+
+UserNav.propTypes = {
+  user: PropTypes.objectOf(PropTypes.string).isRequired,
+};
