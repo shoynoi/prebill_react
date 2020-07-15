@@ -31,6 +31,7 @@ class Login extends React.Component {
         if (response.ok) {
           window.location.href = '/';
         } else {
+          window.message = { alert: 'ユーザー名かパスワードが正しくありません。' };
           this.setState({ hasError: true });
         }
       })

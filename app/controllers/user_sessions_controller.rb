@@ -9,7 +9,6 @@ class UserSessionsController < ApplicationController
       flash.notice = "ログインしました。"
       head :ok
     else
-      flash.alert = "ユーザー名かパスワードが正しくありません。"
       head :unauthorized
     end
   end
