@@ -10,31 +10,20 @@ class Flash extends React.Component {
   }
 
   componentDidMount() {
-    this.fetchFlash();
+    this.getMessage();
   }
 
   componentDidUpdate(prevProps) {
     const { services } = this.props;
     if (services !== prevProps.services) {
-      this.fetchFlash();
+      this.getMessage();
     }
   }
 
-  fetchFlash() {
-    fetch('/api/flash', {
-      method: 'GET',
-    })
-      .then((response) => {
-        response.json()
-          .then((message) => {
-            this.setState({
-              flash: message,
-            });
-          });
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+  getMessage() {
+    this.setState({
+      flash: window.message,
+    });
   }
 
   render() {
