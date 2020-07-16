@@ -5,6 +5,7 @@ namespace :notification do
   task renewal: :environment do
     Service.includes(:user).renewal.group_by(&:user).each do |user, services|
       unless user.renewal_sent_at.try(:between?, Date.today.beginning_of_day, Date.today.end_of_day)
+        services.each { |service| Notification.renew_service(service) }
         UserMailer.renew_services(user, services).deliver_now
         user.touch(:renewal_sent_at)
       end
