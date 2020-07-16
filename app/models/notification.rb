@@ -2,4 +2,6 @@
 
 class Notification < ApplicationRecord
   belongs_to :service
+
+  scope :recent, -> { order(created_at: :desc).limit(10) }
 end
