@@ -2,6 +2,7 @@
 
 class Service < ApplicationRecord
   enum plan: { monthly: 0, yearly: 1 }
+  has_many :notifications, dependent: :destroy
   belongs_to :user
 
   validates :name, presence: true
