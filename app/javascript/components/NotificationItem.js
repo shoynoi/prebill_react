@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const NotificationItem = ({ notification, onClick }) => (
-  <li className="header-dropdown__item" onClick={() => onClick(notification)}>
+  <li aria-hidden="true" className="header-dropdown__item" onClick={() => onClick(notification)}>
     <div className="header-dropdown__container">
       <div className={`header-dropdown__unread-icon ${notification.read ? 'is-read' : ''}`} />
       <div className="header-dropdown__text-holder">
