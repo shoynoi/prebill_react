@@ -11,15 +11,19 @@ const NotificationList = ({ onClick, closeDropdown, notifications }) => {
       <div className="header-dropdown__header">
         通知
       </div>
-      <ul className="header-dropdown__items">
-        { notifications.map((notification) => (
-          <NotificationItem
-            notification={notification}
-            onClick={onClick}
-            key={notification.id}
-          />
-        ))}
-      </ul>
+      { notifications.length
+        ? (
+          <ul className="header-dropdown__items">
+            { notifications.map((notification) => (
+              <NotificationItem
+                notification={notification}
+                onClick={onClick}
+                key={notification.id}
+              />
+            ))}
+          </ul>
+        )
+        : <p className="header-dropdown__container">通知はありません</p>}
     </div>
   );
 };
