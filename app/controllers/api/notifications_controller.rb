@@ -3,9 +3,6 @@
 class Api::NotificationsController < ApplicationController
   def index
     @notifications = current_user.notifications.recent
-    respond_to do |format|
-      format.json { render json: @notifications, only: [:id, :read, :message, :created_at] }
-    end
   end
 
   def update
