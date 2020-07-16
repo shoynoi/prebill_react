@@ -13,7 +13,7 @@ const NotificationList = ({ onClick, closeDropdown, notifications }) => {
       </div>
       { notifications.length
         ? (
-          <ul className="header-dropdown__items">
+          <ul className="header-dropdown__items is-notification">
             { notifications.map((notification) => (
               <NotificationItem
                 notification={notification}

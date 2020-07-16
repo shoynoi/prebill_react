@@ -429,14 +429,16 @@ header > .container {
 
 .header-dropdown__items {
   list-style: none;
-  > :not(:last-of-type) {
-    border-bottom: 1px solid #ddd;
+  &.is-notification {
+    overflow-y: scroll;
+    height: 50vh;
   }
 }
 
 .header-dropdown__item {
   font-size: .875rem;
   transition: all ease-out .2s;
+  border-bottom: 1px solid #ddd;
   &:hover {
     background-color: #E5E5E5;
   }
