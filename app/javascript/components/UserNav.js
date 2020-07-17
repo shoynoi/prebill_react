@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import HeaderMenu from './HeaderMenu';
 import Notification from './Notification';
 
-const UserNav = ({ user }) => (
+const UserNav = ({ user, services }) => (
   <div className="header-nav__items">
     <div className="header-nav__item">
-      <Notification />
+      <Notification services={services} />
     </div>
     <div className="header-nav__item">
       <HeaderMenu user={user} />

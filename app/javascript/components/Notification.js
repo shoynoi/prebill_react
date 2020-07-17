@@ -14,6 +14,17 @@ class Notification extends React.Component {
   }
 
   componentDidMount() {
+    this.fetchNotifications();
+  }
+
+  componentDidUpdate(prevProps) {
+    const { services } = this.props;
+    if (prevProps.services !== services) {
+      this.fetchNotifications();
+    }
+  }
+
+  fetchNotifications() {
     fetch('/api/notifications', {
       method: 'GET',
       credentials: 'same-origin',
