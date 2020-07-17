@@ -18,4 +18,9 @@ export default UserNav;
 
 UserNav.propTypes = {
   user: PropTypes.objectOf(PropTypes.string).isRequired,
+  services: PropTypes.arrayOf(PropTypes.object),
+};
+
+UserNav.defaultProps = {
+  services: [],
 };

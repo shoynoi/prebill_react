@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AccountNav from './AccountNav';
 import UserNav from './UserNav';
 
@@ -50,3 +51,11 @@ class HeaderNav extends React.Component {
 }
 
 export default HeaderNav;
+
+HeaderNav.propTypes = {
+  services: PropTypes.arrayOf(PropTypes.object),
+};
+
+HeaderNav.defaultProps = {
+  services: [],
+};

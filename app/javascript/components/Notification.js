@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NotificationIcon from './NotificationIcon';
 import NotificationList from './NotificationList';
 import getCsrfToken from '../helpers/getCsrfToken';
@@ -100,3 +101,11 @@ class Notification extends React.Component {
 }
 
 export default Notification;
+
+Notification.propTypes = {
+  services: PropTypes.arrayOf(PropTypes.object),
+};
+
+Notification.defaultProps = {
+  services: [],
+};

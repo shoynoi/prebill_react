@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import HeaderNav from './HeaderNav';
 
 const Header = ({ services }) => (
@@ -13,3 +14,11 @@ const Header = ({ services }) => (
 );
 
 export default Header;
+
+Header.propTypes = {
+  services: PropTypes.arrayOf(PropTypes.object),
+};
+
+Header.defaultProps = {
+  services: [],
+};
