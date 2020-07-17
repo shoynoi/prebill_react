@@ -10,19 +10,19 @@ class Flash extends React.Component {
   }
 
   componentDidMount() {
-    this.getMessage();
+    this.setFlash(window.message);
   }
 
   componentDidUpdate(prevProps) {
     const { services } = this.props;
     if (services !== prevProps.services) {
-      this.getMessage();
+      this.setFlash(window.message);
     }
   }
 
-  getMessage() {
+  setFlash(message) {
     this.setState({
-      flash: window.message,
+      flash: message,
     });
   }
 
