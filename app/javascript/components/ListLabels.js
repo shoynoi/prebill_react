@@ -8,6 +8,7 @@ const ListLabels = () => (
     <ListLabelItem colSize="sm">料金</ListLabelItem>
     <ListLabelItem>更新日</ListLabelItem>
     <ListLabelItem>通知日</ListLabelItem>
+    <div className="list-label__button" />
   </div>
 );
 
