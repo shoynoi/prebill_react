@@ -6,9 +6,7 @@ import Header from '../../components/Header';
 const Welcome = ({ children }) => (
   <>
     <Header />
-    <div className="container">
-      {children}
-    </div>
+    {children}
     <Footer />
   </>
 );
