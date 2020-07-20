@@ -28,11 +28,7 @@ ListDisplayedItem.propTypes = {
     renewed_on: PropTypes.string,
     next_renewed_on: PropTypes.string,
     remind_on: PropTypes.string,
-  }),
+  }).isRequired,
   onClick: PropTypes.func.isRequired,
   isExpand: PropTypes.bool.isRequired,
-};
-
-ListDisplayedItem.defaultProps = {
-  service: undefined,
 };

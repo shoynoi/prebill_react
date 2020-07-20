@@ -12,9 +12,10 @@ ServiceItemElement.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
-  ]).isRequired,
+  ]),
 };
 
 ServiceItemElement.defaultProps = {
   size: 'md',
+  children: null,
 };

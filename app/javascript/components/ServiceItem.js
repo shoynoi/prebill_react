@@ -43,10 +43,6 @@ ServiceItem.propTypes = {
     renewed_on: PropTypes.string,
     remind_on: PropTypes.string,
     description: PropTypes.string,
-  }),
+  }).isRequired,
   onDelete: PropTypes.func.isRequired,
-};
-
-ServiceItem.defaultProps = {
-  service: undefined,
 };

@@ -12,5 +12,7 @@ const App = ({ children }) => (
 export default App;
 
 App.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element).isRequired,
+  children: PropTypes.oneOfType(
+    [PropTypes.element, PropTypes.arrayOf(PropTypes.element)],
+  ).isRequired,
 };
