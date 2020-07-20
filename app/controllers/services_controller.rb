@@ -45,7 +45,6 @@ class ServicesController < ApplicationController
 
   def destroy
     if @service.destroy
-      flash.notice = "サービスを削除しました。"
       head :ok
     end
   end

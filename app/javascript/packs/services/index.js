@@ -44,6 +44,7 @@ class Index extends React.Component {
       })
         .then((response) => {
           if (response.ok) {
+            window.message = { notice: 'サービスを削除しました。' };
             const { services } = this.state;
             this.setState({
               services: services.filter((service) => serviceId !== service.id),
