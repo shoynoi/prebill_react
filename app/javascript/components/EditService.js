@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ServiceForm from './ServiceForm';
 import getCsrfToken from '../helpers/getCsrfToken';
+import PageHeader from './PageHeader';
+import PageHeaderTitle from './PageHeaderTitle';
+import LinkButton from './LinkButton';
 
 class EditService extends React.Component {
   constructor(props) {
@@ -65,6 +68,12 @@ class EditService extends React.Component {
 
     return (
       <div>
+        <PageHeader>
+          <PageHeaderTitle>サービス修正</PageHeaderTitle>
+          <div className="page-header__action">
+            <LinkButton href="/" color="secondary" size="md">一覧</LinkButton>
+          </div>
+        </PageHeader>
         <ServiceForm
           service={service}
           onSubmit={this.updateService}

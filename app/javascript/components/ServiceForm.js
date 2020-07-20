@@ -50,24 +50,22 @@ class ServiceForm extends React.Component {
 
         <form onSubmit={this.handleSubmit} id="service-form">
           <div className="form-items">
-            <div className="form-item">
-              <label htmlFor="service_name">
-                <strong className="form-item__label">サービス名</strong>
-                <input
-                  type="text"
-                  className="form-item__text-input"
-                  id="service_name"
-                  name="name"
-                  placeholder="サービス名"
-                  value={service.name}
-                  onChange={this.handleInputChange}
-                />
-              </label>
-            </div>
+            <label htmlFor="service_name" className="form-item">
+              <strong className="form-item__label">サービス名</strong>
+              <input
+                type="text"
+                className="form-item__text-input"
+                id="service_name"
+                name="name"
+                placeholder="サービス名"
+                value={service.name}
+                onChange={this.handleInputChange}
+              />
+            </label>
             <div className="form-items__inner">
-              <div className="form-item">
-                <label htmlFor="service_plan">
-                  <strong className="form-item__label">プラン</strong>
+              <label htmlFor="service_plan" className="form-item">
+                <strong className="form-item__label">プラン</strong>
+                <div className="is-select">
                   <select
                     name="plan"
                     id="service_plan"
@@ -78,60 +76,52 @@ class ServiceForm extends React.Component {
                     <option value="monthly">月額</option>
                     <option value="yearly">年額</option>
                   </select>
-                </label>
-              </div>
-              <div className="form-item">
-                <label htmlFor="service_price">
-                  <strong className="form-item__label">料金</strong>
-                  <input
-                    type="number"
-                    className="form-item__text-input"
-                    id="service_price"
-                    name="price"
-                    value={service.price}
-                    onChange={this.handleInputChange}
-                  />
-                </label>
-              </div>
-            </div>
-            <div className="form-item">
-              <label htmlFor="service_renewed_on">
-                <strong className="form-item__label">更新日</strong>
+                </div>
+              </label>
+              <label htmlFor="service_price" className="form-item">
+                <strong className="form-item__label">料金</strong>
                 <input
-                  type="date"
+                  type="number"
                   className="form-item__text-input"
-                  id="service_renewed_on"
-                  name="renewed_on"
-                  value={service.renewed_on}
+                  id="service_price"
+                  name="price"
+                  value={service.price}
                   onChange={this.handleInputChange}
                 />
               </label>
             </div>
-            <div className="form-item">
-              <label htmlFor="service_remind_on">
-                <strong className="form-item__label">通知日</strong>
-                <input
-                  type="date"
-                  className="form-item__text"
-                  id="service_remind_on"
-                  name="remind_on"
-                  value={service.remind_on}
-                  onChange={this.handleInputChange}
-                />
-              </label>
-            </div>
-            <div className="form-item">
-              <label htmlFor="service_description">
-                <strong className="form-item__label">メモ</strong>
-                <textarea
-                  name="description"
-                  id="service_description"
-                  className="form-item__textarea"
-                  value={service.description}
-                  onChange={this.handleInputChange}
-                />
-              </label>
-            </div>
+            <label htmlFor="service_renewed_on" className="form-item">
+              <strong className="form-item__label">更新日</strong>
+              <input
+                type="date"
+                className="form-item__text-input"
+                id="service_renewed_on"
+                name="renewed_on"
+                value={service.renewed_on}
+                onChange={this.handleInputChange}
+              />
+            </label>
+            <label htmlFor="service_remind_on" className="form-item">
+              <strong className="form-item__label">通知日</strong>
+              <input
+                type="date"
+                className="form-item__text-input"
+                id="service_remind_on"
+                name="remind_on"
+                value={service.remind_on}
+                onChange={this.handleInputChange}
+              />
+            </label>
+            <label htmlFor="service_description" className="form-item">
+              <strong className="form-item__label">メモ</strong>
+              <textarea
+                name="description"
+                id="service_description"
+                className="form-item__textarea"
+                value={service.description}
+                onChange={this.handleInputChange}
+              />
+            </label>
           </div>
           <ul className="form-actions__items">
             <li className="form-actions__item">
