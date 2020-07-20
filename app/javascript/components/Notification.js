@@ -81,11 +81,11 @@ class Notification extends React.Component {
 
     if (notifications === null) return null;
 
-    const hasUnRead = notifications.some((notification) => !notification.read);
+    const hasUnread = notifications.some((notification) => !notification.read);
 
     return (
       <div className="header-notification">
-        <NotificationIcon onClick={this.toggleDropdown} hasUnRead={hasUnRead} />
+        <NotificationIcon onClick={this.toggleDropdown} hasUnread={hasUnread} />
         { isOpen
         && (
           <NotificationList
