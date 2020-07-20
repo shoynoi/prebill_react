@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AccountNav from './AccountNav';
 import UserNav from './UserNav';
 
@@ -33,6 +34,7 @@ class HeaderNav extends React.Component {
 
   render() {
     const { user, isLoaded } = this.state;
+    const { services } = this.props;
 
     if (isLoaded === false) {
       return null;
@@ -41,7 +43,7 @@ class HeaderNav extends React.Component {
     return (
       <nav className="header-nav">
         {user
-          ? <UserNav user={user} />
+          ? <UserNav user={user} services={services} />
           : <AccountNav />}
       </nav>
     );
@@ -49,3 +51,11 @@ class HeaderNav extends React.Component {
 }
 
 export default HeaderNav;
+
+HeaderNav.propTypes = {
+  services: PropTypes.arrayOf(PropTypes.object),
+};
+
+HeaderNav.defaultProps = {
+  services: [],
+};

@@ -3,13 +3,17 @@ import PropTypes from 'prop-types';
 import { render } from 'react-dom';
 import EditService from '../../components/EditService';
 import App from '../application/app';
+import Header from '../../components/Header';
 
 const Edit = ({ serviceId }) => (
-  <App>
-    <main className="page">
-      <EditService serviceId={serviceId} />
-    </main>
-  </App>
+  <>
+    <Header />
+    <App>
+      <main className="page">
+        <EditService serviceId={serviceId} />
+      </main>
+    </App>
+  </>
 );
 
 document.addEventListener('DOMContentLoaded', () => {
