@@ -838,3 +838,94 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: #d64242;
   color: white;
 }
+
+// welcome
+
+.welcome {
+  margin: 3.5rem 0;
+}
+
+.firstview {
+  margin-bottom: 3.5rem;
+}
+
+.firstview__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.firstview__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.firstview__title {
+  font-family: "American Typewriter";
+  line-height: 1.2;
+  font-size: 4rem;
+  margin-bottom: .2rem;
+}
+
+.firstview__subtitle {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.firstview__image {
+  width: 50%;
+}
+
+.welcome__section {
+  background-color: white;
+  padding: 2rem 0;
+}
+
+.welcome__features {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.welcome-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 33.33%;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
+
+.welcome-feature__body {
+  background-color: white;
+}
+
+.welcome-feature__image {
+  margin-bottom: .8rem;
+  width: 200px;
+  height: 200px;
+}
+
+.welcome-feature__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.welcome-feature__description {
+  font-size: .94rem;
+}
+
+.welcome-feature__header {
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+}
+
+.welcome-feature__break {
+  display: none;
+}
